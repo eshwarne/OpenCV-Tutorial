@@ -14,6 +14,9 @@ width, height = imgTemplate.shape[::-1]
 
 
 mask = cv2.matchTemplate(imgGray,imgTemplate,cv2.TM_CCOEFF_NORMED)
+# mask = cv2.matchTemplate(imgGray,imgTemplate,cv2.TM_CCORR)
+# mask = cv2.matchTemplate(imgGray,imgTemplate,cv2.TM_CCOEFF)
+# mask = cv2.matchTemplate(imgGray,imgTemplate,cv2.TM_CCORR_NORMED)
 thresholdMatch = 0.99
 locationOfMatch = np.where(mask>=thresholdMatch)
 
