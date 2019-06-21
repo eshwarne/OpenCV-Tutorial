@@ -22,6 +22,7 @@ locationOfMatch = np.where(mask>=thresholdMatch)
 
 for pointOfMatch in zip(*locationOfMatch[::-1]):
     cv2.rectangle(img,pointOfMatch,(pointOfMatch[0]+width,pointOfMatch[1]+width),(255,0,0),3)
+    
 
 cv2.imshow(windowName, mask)
 cv2.imshow(windowName,img)
